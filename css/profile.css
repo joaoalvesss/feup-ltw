@@ -1,0 +1,112 @@
+:root {
+     --dark-white: #eae7e7;
+     --white: #F5F5F5;
+     --lite-blue: #A8DFF1;
+     --dark-blue: #3D7C98;
+     --blue: #73B0CD;
+     --dark-grey: #243946;
+}
+
+* {
+     font-family: 'Poppins', sans-serif;
+}
+
+body {
+     margin: 0;
+}
+
+main {
+     margin: 0;
+     padding: 0;
+}
+
+#container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 1em;
+}
+
+.title{
+     display: flex;
+     width: 500px;
+     padding: 0.5em;
+     border: 2px solid var(--dark-blue);
+     border-radius: 0.5em;
+     color: var(--dark-grey);
+     background-color: var(--lite-blue);
+     font-weight: bold;
+     font-size: 1.8em;
+     margin: 0;
+     justify-content: center;
+}
+
+.box{
+     background-color: var(--white);
+     border: 2px solid var(--blue);
+     border-radius: 1.5em;
+     padding: 1em;
+     width: 500px;
+}
+
+form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+form label {
+     align-self: flex-start;
+     margin-bottom: 0.5em;
+     color: var(--dark-blue);
+     font-size: 0.9em;
+     font-weight: bolder;
+     margin-left: 10%;
+}
+   
+form input[type="text"], input[type="password"], form textarea {
+     width: 80%;
+     padding: 0.7em;
+     margin-bottom: 1em;
+     border-radius: 1em;
+     border: 1px solid #ccc;
+     background-color: var(--white);
+}
+ 
+form input[type="text"]:focus, input[type="password"]:focus, form textarea:focus {
+     width: 80%;
+     padding: 0.7em;
+     border-radius: 1em;
+     border: 1px solid #ccc;
+     background-color: var(--dark-white);
+     outline: 1px solid var(--blue);
+}
+ 
+button[type="submit"] {
+     display: flex;
+     justify-content: center;
+     border: none;
+     border-radius: 0.7em;
+     padding: 0.7em;
+     margin: 0 auto;
+     margin: 1.5em 0em 0.5em 0em;
+     width: 60%;
+     background-color: var(--dark-blue);
+     transition: background-color 0.5s;
+     color: var(--white);
+     font-weight: bold;
+}
+ 
+button[type="submit"]:hover {
+     outline: none;
+     background-color: var(--dark-grey);
+     color: var(--dark-white);
+}
+
+@media (max-width: 600px) {
+     .title, .box{
+          display: block;
+          width: 200px;
+     }
+}

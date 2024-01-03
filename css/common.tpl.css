@@ -1,0 +1,146 @@
+:root {
+     --dark-white: #eae7e7;
+     --white: #F5F5F5;
+     --lite-blue: #A8DFF1;
+     --dark-blue: #3D7C98;
+     --blue: #73B0CD;
+     --dark-grey: #243946;
+} 
+
+body {
+     margin:0;
+     padding: 0;
+     background-color:var(--dark-white);
+     
+     display: grid;
+     grid-template-columns: 3.6em 1fr;
+     grid-template-rows: 4em 1fr 2em;
+}
+
+header{
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 1;
+     grid-row-end: 2;
+
+     display: flex;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     background-color: var(--dark-grey);
+     color: var(--dark-white);
+     width: 100%;
+     height: 4em;
+     z-index: 2;
+}
+
+header h1 {
+     font-size: 2em;
+     padding: 0.35em;
+     margin: 0;
+     font-family: 'Poppins', sans-serif;
+     margin-left: 3em;
+}
+
+header a {
+     display: flex;
+     text-decoration: none;
+     padding: 0.5em;
+     margin-bottom: 1.2em;
+     width: 100%;
+     height: 40px;
+     box-sizing: border-box;
+     justify-content: right;
+}
+
+.sidenav{
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 1;
+     grid-row-end: 3;
+          
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     position: fixed;
+     height: 100%;
+     background-color: var(--dark-grey);
+     overflow-x: hidden;
+     overflow-y: hidden;
+     width: 3.6em;
+     z-index: 1;
+}
+
+.sidenav a {
+     display: block;
+     text-decoration: none;
+     padding: 0.5em;
+     margin-bottom: 1.2em;
+     width: 100%;
+     height: 40px;
+     box-sizing: border-box;
+}
+
+.sidenav a:last-child {
+     position: absolute;
+     bottom: 1.5em;
+}
+
+
+main{
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start: 2;
+     grid-row-end: 3;
+}
+
+footer{
+     grid-column-start: 1;
+     grid-column-end: 3;
+     grid-row-start: 3;
+     grid-row-end: 4;
+
+     width: 100%;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+     bottom: 0;
+     background-color: var(--dark-grey);
+     color: var(--dark-white);
+     position:static;
+}
+
+#messages {
+     display: flex;
+     align-items: center;
+     margin-left: 1em;
+     font-size: 1em;
+     color: var(--blue);
+     font-weight: bold;
+}
+
+#container{
+     margin: 1em;
+}
+
+#tickets-container {
+     grid-column-start: 1;
+     grid-column-end: 2;
+
+}
+
+#side-nav{
+     grid-column-start: 3;
+     grid-column-end: 4;
+}
+
+@media (max-width: 600px) {
+     footer{
+          font-size: small;
+     }
+     header h1{
+          font-size: 1.5em;
+          align-items: center;
+     }
+}

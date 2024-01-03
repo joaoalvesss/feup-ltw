@@ -1,0 +1,115 @@
+:root {
+     --dark-white: #eae7e7;
+     --white: #F5F5F5;
+     --lite-blue: #A8DFF1;
+     --dark-blue: #3D7C98;
+     --blue: #73B0CD;
+     --dark-grey: #243946;
+}    
+
+* {
+     font-family: 'Poppins', sans-serif;
+}
+
+body {
+     background-image: url('../docs/background1.jpg');
+     background-size: cover;
+     background-position: center;
+     background-color: var(--blue);
+     color: var(--dark-white);
+     min-height: 95vh;
+     background-repeat: no-repeat;
+}
+ 
+.container {
+     max-width: 350px;
+     margin: 0 auto;
+     padding: 30px;
+     background-color: var(--dark-blue);
+     border-radius: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+     font-size: 32px;
+     text-align: center;
+
+}
+ 
+form {
+     display: flex;
+     flex-direction: column;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+     border: none;
+     border-radius: 5px;
+     padding: 0.8em;
+     margin-bottom: 1.7em;
+     background-color: var(--white);
+     color: black;
+     font-family: 'Poppins', sans-serif;
+     font-weight: light;
+     font-size: 0.8em;
+}
+
+button[type="submit"] {
+     border: none;
+     border-radius: 5px;
+     padding: 10px;
+     margin: 0 auto;
+     width: 33.33%;
+     background-color: var(--blue);
+     transition: background-color 0.5s;
+     color: var(--white);
+     font-family: 'Poppins', sans-serif;
+     font-weight: bold;
+}
+
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+     outline: none;
+     background-color: var(--lite-blue);
+     color: black;
+}
+
+button[type="submit"]:hover {
+     outline: none;
+     background-color: var(--dark-white);
+     color: var(--dark-blue);
+}
+ 
+input[type="submit"] {
+     cursor: pointer;
+}
+
+p a {
+     color: var(--blue);
+     text-decoration: none;
+}
+ 
+p a:hover {
+     color: var(--white);
+}
+ 
+label {
+     font-size: 16px;
+     margin-bottom: 3px;
+     color: var(--dark-white);
+}
+
+p {
+     margin-top: 1em;
+     text-align: center;
+     color: var(--dark-white);
+}
+
+#messages {
+     font-size: 0.9em;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 1em;
+     color: var(--dark-grey);
+     font-weight: bold;
+}

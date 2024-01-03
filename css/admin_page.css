@@ -1,0 +1,164 @@
+:root {
+    --dark-white: #eae7e7;
+    --white: #F5F5F5;
+    --lite-blue: #A8DFF1;
+    --dark-blue: #3D7C98;
+    --blue: #73B0CD;
+    --dark-grey: #243946;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1em;
+}
+
+.box{
+    background-color: var(--white);
+    border: 2px solid var(--blue);
+    border-radius: 1.5em;
+    padding: 2em;
+    max-width: 100%;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    border-radius: 0.7em;
+    padding: 0.7em;
+    margin: 0 auto;
+    width: 60%;
+    background-color: var(--dark-blue);
+    transition: background-color 0.5s;
+    color: var(--white);
+    font-weight: bold;
+}
+
+button:hover {
+    outline: none;
+    background-color: var(--dark-grey);
+    color: var(--dark-white);
+}
+
+#searchUsername{
+    width: 80%;
+}
+
+form input[type="text"], form textarea {
+    width: 80%;
+    padding: 0.7em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    border: 2px solid var(--lite-blue);
+    background-color: white;
+
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical; 
+}
+
+form label {
+    align-self: flex-start;
+    margin-bottom: 0.5em;
+    color: var(--dark-blue);
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+
+form input[type="text"]:focus, form textarea:focus {
+    width: 80%;
+    padding: 0.7em;
+    border-radius: 1em;
+    border: 2px solid var(--dark-grey);
+    background-color: var(--dark-white);
+    outline: 1px solid var(--blue);
+}
+
+.custom-file-input input[type="file"] {
+    position: absolute;
+    left: -9999px;
+}
+  
+.custom-file-input {
+    display: inline-block;
+    padding: 3px 3px;
+    background-color: var(--dark-blue);
+    color: var(--dark-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+.custom-file-input:hover {
+    background-color: var(--dark-grey);
+    color: var(--dark-white);
+}
+
+h2 {
+    font-size: 2.1em;
+    color: var(--dark-blue);
+    font-weight: bolder;
+    margin-top: 1.5em;
+}
+
+li {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type:circle;
+    color: var(--dark-blue);
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 1em 0em 0em 0em;
+    padding: 0em;
+}
+
+#username {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+#searchUsername {
+    border-radius: 1em;
+    border: 2px solid var(--lite-blue);
+    padding: 0.5em;
+}
+
+li:hover,
+li:hover * {
+    cursor: pointer;
+}
+
+select {
+    border-radius: 1em;
+    padding: 0.5em;
+    border: 1px solid var(--blue);
+}
+
+@media (max-width: 600px) {
+    #container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1em;
+    }
+    .box{
+        width: 75%;
+    }
+}

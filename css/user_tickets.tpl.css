@@ -1,0 +1,236 @@
+:root {
+     --dark-white: #eae7e7;
+     --white: #F5F5F5;
+     --lite-blue: #A8DFF1;
+     --dark-blue: #3D7C98;
+     --blue: #73B0CD;
+     --dark-grey: #243946;
+}
+
+* {
+     font-family: 'Poppins', sans-serif;
+}
+
+body {
+     background-color: var(--dark-white);
+}
+
+#container{
+     display: grid;
+     grid-template-columns: 75% 1em auto;
+     grid-template-rows: auto auto;
+}
+
+#tickets-container {
+     grid-column-start: 1;
+     grid-column-end: 2;
+
+}
+
+#ticket-container .title{
+     grid-row-start: 1;
+     grid-row-end: 2;
+
+     width: 65%;
+}
+
+#ticket-list {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+
+#side-nav{
+     grid-column-start: 3;
+     grid-column-end: 4;
+}
+
+#side-nav h3{
+     grid-row-start: 1;
+     grid-row-end: 2;
+}
+
+@media (max-width: 600px) {
+     #container{
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: auto auto auto auto;
+     }
+     
+     #tickets-container {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 3;
+          grid-row-end: 5;
+     }
+     #side-nav {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 3;
+
+          margin-bottom: 1em;
+     }
+}
+
+#search-container{
+     text-align: left;
+}
+
+#search-container button {
+     padding: 0.5em 1em;
+     background-color: var(--dark-blue);
+     color: var(--white);
+     border: none;
+     border-radius: 0.3em;
+     font-size: 1em;
+     cursor: pointer;
+     margin-top: 1em;
+     transition: 0.25s;
+     margin: 1em;
+}
+
+#search-container button:hover {
+     background-color: var(--dark-grey);
+     color: var(--dark-white);
+}
+
+#search-bar input[type="text"] {
+     width: 90%;
+     font-size: 1em;
+     padding: 0.5em;
+     border: 1.6px solid var(--dark-blue);
+     border-radius: 0.5em;
+     margin-left: 1em;
+     margin-right: 1em;
+}
+
+#search-bar input[type="text"]:focus {
+     background-color: var(--dark-white);
+     border: 2px solid var(--blue);
+     outline: none;
+}
+
+#search-container h3 {
+     color: var(--dark-grey);
+     font-size: 1.1em;
+     margin: 1em;
+}
+
+#filters{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     gap: .5em;
+}
+
+#filters {
+     margin-top: 1em;
+}
+   
+#filters select {
+     padding: 0.5em;
+     font-size: 1em;
+     display: block;
+     margin: 1em;
+     border: 1.6px solid var(--dark-blue);
+     border-radius: 0.5em;
+     color: #5A5A5A;
+}
+
+#filters select:focus {
+     background-color: var(--dark-white);
+     border: 2px solid var(--blue);
+     outline: none;
+     color: var(--dark-grey);
+}
+
+#filters option {
+     font-size: 1em;
+}
+
+#details-container strong {
+     color: var(--dark-grey);
+     font-size: 1em;
+     margin: 1em;
+
+}
+
+#details-container ul {
+     list-style-type: none;
+}
+
+#details-container li {
+     line-height: 1.2em;
+     color: var(--dark-blue);
+     font-size: 1em;
+     font-size: 1em;
+}
+
+.title{
+     display: block;
+     padding: 0.5em;
+     border: 2px solid var(--dark-blue);
+     border-radius: 0.5em;
+     color: var(--dark-grey);
+     background-color: var(--lite-blue);
+     font-weight: bold;
+     font-size: 1.8em;
+     margin: 0;
+}
+
+.box {
+     margin-top: 1em;
+     background-color: var(--white);
+     border: 2px solid var(--blue);
+     border-radius: 1.5em;
+     padding: 1em;
+     height: fit-content;
+     align-items: center;
+}
+
+.box p {
+     color: var(--dark-blue);
+     font-size: 0.9em;
+}
+
+.box strong {
+     color: var(--blue);
+     font-size: 1em;
+}
+
+.priority-box {
+     display: inline-block;
+     padding: 2px;
+     border-radius: 0.3em;
+     font-weight: bold;
+}
+   
+.red {
+     background-color: #800000;
+     color: var(--dark-white);
+}
+   
+.yellow {
+     background-color: #DAA520;
+     color: var(--dark-white);
+}
+   
+.green {
+     background-color: #006400;
+     color: var(--dark-white);
+}
+
+.link{
+     color: var(--dark-blue); 
+     font-size: 1.1em;
+     font-weight: bold;
+     margin-top: 1em;
+     border: none;
+     background-color: transparent;
+}
+
+.link:hover{
+     color: var(--dark-grey);
+}
+   
